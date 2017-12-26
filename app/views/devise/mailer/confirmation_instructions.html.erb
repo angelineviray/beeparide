@@ -1,5 +1,12 @@
-<p>Welcome <%= @email %>!</p>
+<p>Welcome to Beep a Ride, <%= @fullname %>! </p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>Thank you for signing up on our mailing list with your email address: <%= @email %>, beep!</p>
+
+<p>To ensure you are well-informed and up-to-date about Beep a Ride and any of our offers and promos, make sure to <u>confirm your account email</u> through the link below:</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p>If you did not sign up with us, please forward this email to hello@beeparide.com to unsubscribe from our mailing list.</p>
+
+<p>Cheers,<br/>
+Beep a Ride Team</p>
