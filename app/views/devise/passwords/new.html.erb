@@ -2,17 +2,18 @@
   <div class="col-md-4 col-md-offset-4">
 
     <h2 class="text-center">Forgot your password?</h2>
+    <h5 class="text-center">We are happy to help, beep!</h5>
     <br/>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= render 'shared/devisemes' %>
 
       <div class="form-group">
-        <%= f.email_field :email, autofocus: true, placeholder: "Email", class: "form-control" %>
+        <%= f.email_field :email, autofocus: true, placeholder: "What Email did you sign up with?", class: "form-control" %>
       </div>
 
       <div class="actions">
-        <%= f.submit "Send me reset password instructions", class: "btn btn-primary" %>
+        <%= f.submit "Send me password reset instructions!", class: "btn btn-primary" %>
       </div>
     <% end %>
 
