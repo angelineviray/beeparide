@@ -22,10 +22,15 @@
         <% end %><br />
 -->        <%= f.password_field :password, autocomplete: "off", placeholder: "And your Password? Shhh!", class: "form-control" %>
       </div>
+      <br/><br/>
 
       <div class="actions">
-        <%= f.submit "Sign me up, beep!", class: "btn btn-primary" %>
+        <%= f.submit "Sign me up, beep!", class: "btn btn-normal btn-block" %>
       </div>
     <% end %>
+
+    <hr/>
+    <%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-facebook btn-block" %>
+
   </div>
 </div>

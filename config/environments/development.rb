@@ -56,11 +56,22 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
+    address: 'smtp.mailgun.org',
     port: 587,
-    enable_starttls_auto: true,
+    domain: 'mg.beeparide.com',
     authentication: 'plain',
-    user_name: ENV['gmail_address'],
-    password: ENV['gmail_password']
+    user_name: ENV['mg_login'],
+    password: ENV['mg_pw']
   }
+
+  ## SEND EMAIL VIA GMAIL SETTINGS
+  # config.action_mailer.smtp_settings = {
+  #   address: 'smtp.gmail.com',
+  #   port: 587,
+  #   enable_starttls_auto: true,
+  #   authentication: 'plain',
+  #   user_name: ENV['gmail_address'],
+  #   password: ENV['gmail_password']
+  # }
+
 end
